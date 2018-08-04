@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="war20180708">
+    <output-path>$PROJECT_DIR$/out/artifacts/war20180708</output-path>
+    <root id="archive" name="war20180708.war">
+      <element id="dir-copy" path="D:/Acvtive" />
+    </root>
+  </artifact>
+</component>

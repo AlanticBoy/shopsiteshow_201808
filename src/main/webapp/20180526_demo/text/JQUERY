@@ -1,0 +1,47 @@
+一、文档加载完毕执行函数:
+jQuery 入口函数:
+$(document).ready(function(){
+//....
+});
+或者
+$(function(){
+//....
+})
+JavaScript 入口函数:
+window.onload=function(){
+//执行代码
+}
+Jquery的入口函数与Javascript的入口函数的区别:
+Jquery的入口函数是在html所有标签(DOM)加载完毕后执行
+JavaScript的入口函数是在所有内容包括标签和外部引用图片都加加载完后，才会执行
+二、JQuery选择器
+元素选择器：
+$("[href='#']") 选取所有带有 href 值等于 "#" 的元素。
+$("[href!='#']") 选取所有带有 href 值不等于 "#" 的元素。
+$("[href$='.jpg']") 选取所有 href 值以 ".jpg" 结尾的元素。
+#id选择器：
+$("#test")
+.class选择器
+$(".test")
+选择的当前元素
+$(this)
+三、JQuery事件
+blur():当元素失去焦点时触发blur()事件
+focus():当元素获得焦点时，触发focus
+mouseover()和mouseenter()的区别：不论鼠标指针穿过被选元素或其子元素，都会触发 mouseover 事件。
+只有在鼠标指针穿过被选元素时，才会触发 mouseenter 事件。
+mouseout()与mouseleave()的区别:
+不论鼠标指针离开被选元素还是任何子元素，都会触发 mouseout 事件.
+只有在鼠标指针离开被选元素时，才会触发 mouseleave 事件。
+三、JQuery效果：
+
+四、JQuery对HTML的操作
+text() - 设置或返回所选元素的文本内容
+html() - 设置或返回所选元素的内容（包括 HTML 标记）
+val() - 设置或返回表单字段的值
+__jQuery - 设置内容和属性
+ $("#test1").text("Hello world!");
+  $("#test2").html("<b>Hello world!</b>");
+   $("#test3").val("Dolly Duck");
+   设置属性 - attr()
+   $("#w3s").attr("href","http://www.w3school.com.cn/jquery");

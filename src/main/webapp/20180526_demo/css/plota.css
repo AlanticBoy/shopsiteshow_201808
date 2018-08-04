@@ -1,0 +1,18 @@
+body {
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+header {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 15%;
+    background-color: gray;
+    color: black;
+}
+
+section {
+    float: left;
+    height: 10%;
+    width: 33%;
+}

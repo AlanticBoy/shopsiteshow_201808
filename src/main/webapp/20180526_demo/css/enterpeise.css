@@ -1,0 +1,151 @@
+body {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+#header {
+    height: 10%;
+    background-color: gray;
+}
+
+#leftDiv {
+    line-height: 110%; /*用于设置行间距*/
+    float: left;
+    width: 25%;
+    height: 10%;
+}
+
+#rightDiv {
+    padding-top: 1%;
+    float: left;
+    height: 10%;
+    padding-left: 50%;
+}
+
+a {
+    text-decoration: none;
+}
+
+#section {
+    height: 45%;
+}
+
+#section1 {
+    text-align: center;
+    font-family: 楷体; /*设置字体样式，如宋体、楷体*/
+    /*font-style,设置字体风格*/
+    margin-top: 1%;
+    margin-right: 1%;
+    line-height: 100%; /*用于设置行间距*/
+    width: 20%;
+    height: 110%;
+    float: left;
+    border-radius: 5%; /*用于设置圆角矩形*/
+    background-image: url("../SOURCE/blue.jpg");
+    background-size: 100% 110%;
+    /*第一个参数是指定相片的宽度，第二个是指定相片的高度
+                                       这里说的宽度和高度不是针对div，而是相片本身的宽和高*/
+}
+
+#section2 {
+    margin-top: 1%;
+    width: 79%;
+    float: left;
+    height: 110%;
+    border-radius: 4%; /*用于设置圆角矩形*/
+    background-image: url("../SOURCE/green.jpg");
+    background-size: 100% 110%;
+}
+
+#section3 {
+    padding-left: 8%;
+    width: 30%;
+}
+
+#secondpart {
+    height: 30%;
+    margin-top: 5%;
+}
+
+#secondpart1 {
+    float: left;
+    width: 32%;
+    height: 100%;
+    border-radius: 4%;
+}
+
+#secondpart1_01 {
+    width: 100%;
+    height: 50%;
+    border-radius: 4%;
+}
+#inputDiv{
+   padding-top: 1%;
+    width: 50%;
+    height: 49%;
+    float: left;
+    padding-left: 5%;
+}
+#imgDiv{
+    background-image: url("../SOURCE/login2.gif");
+    height: 50%;
+    width: 35%;
+    float: left;
+    padding-right: 5%;
+    background-size: 100% 100%;
+}
+#spanDiv{
+    width: 100%;
+    height:50% ;
+
+}
+#secondpart1_02 {
+    width: 100%;
+    height: 49%;
+    margin-top: 1%;
+    border-radius: 4%;
+    background-color: yellowgreen;
+}
+
+#secondpart2 {
+    float: left;
+    width: 32%;
+    margin-left: 1%;
+    margin-right: 1%;
+    border-radius: 4%;
+    height: 100%;
+    background-color: yellow;
+
+}
+
+#secondpart3 {
+    float: left;
+    width: 34%;
+    height: 100%;
+    border-radius: 4%;
+    background-color: green;
+
+}
+
+#footer {
+    margin-top: 1%;
+    height: 10%;
+    margin-bottom: 0%;
+    background-color: gray;
+}
+
+#footer1 {
+    padding-left: 5%;
+    float: left;
+    line-height: 105%;
+    width: 30%;
+    height: 100%;
+}
+
+#footer2 {
+    padding-top: 4%;
+    padding-left: 5%;
+    float: left;
+    width: 30%;
+    height: 100%;
+}

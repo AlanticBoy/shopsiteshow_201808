@@ -1,0 +1,34 @@
+body{
+    margin-left: 10%;
+    margin-right: 10%;
+}
+header{
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 5px;/*padding和margin的区别，padding指的是内边距。margin外边距*/
+}
+nav{
+    text-align: center;
+    line-height: 50px;/*用于设置字体间的上下高度*/
+    background-color: gray;
+    width: 20%;
+    float: left;
+    height: 80%;
+}
+li{
+    list-style-type: none;
+}
+section{
+    background-color: white;
+    width: 80%;
+    float: left;
+    height: 80%;
+}
+footer{
+    background-color: black;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    text-align: center;
+    color: white;
+}

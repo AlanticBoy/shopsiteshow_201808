@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+
+    <!--原来通过扫描会给一个默认名字-->
+    <context:component-scan base-package="com.stronger.service,com.stronger.service.imp"/>
+
+
+    <bean class="com.stronger.spring.ServiceQuest">
+        <constructor-arg ref="dividePrintService"/>
+    </bean>
+    <!--<aop:aspectj-autoproxy proxy-target-class="true"/>-->
+    <bean id="customAspect" class="com.stronger.Aspect.CustomAspect"/>
+    <aop:config proxy-target-class="true">
+        <aop:aspect ref="customAspect">
+            <aop:pointcut id="custom" expression="execution(* com.stronger.Aspect.CustomerTest.*(..))"/>
+            <aop:before method="beforeMethod" pointcut-ref="custom"/>
+        </aop:aspect>
+    </aop:config>
+
+    <bean id="poemTravel" class="com.stronger.sorm.PoemTravel"/>
+    <!--
+    spring的aop动态代理默认使用的是JDK动态代理，JDK代理只能代理接口，不能代理Java类。
+    而CGLIB可以代理接口和Java类-->
+    <aop:config proxy-target-class="true">
+        <aop:aspect ref="poemTravel">
+            <aop:pointcut id="poem" expression="execution(* com.stronger.service.imp.*.*(..))"/>
+            <aop:before pointcut-ref="poem" method="beforeTravelling"/>
+            <aop:after pointcut-ref="poem" method="afterTravelling"/>
+        </aop:aspect>
+    </aop:config>
+
+    <bean id="sellUser" class="com.stronger.spring.SellUser">
+        <property name="name" value="#{'spring'}"/>
+        <property name="time" value="#{T(System).currentTimeMillis()}"/>
+        <!--<property name="date" value="#{T(Math)}"/>-->
+    </bean>
+</beans>
